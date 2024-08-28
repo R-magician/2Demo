@@ -14,12 +14,14 @@ public class PlayerController : MonoBehaviour
     public float jumpFore;
     
     private Rigidbody2D rb;
+    private PhysicsCheck physicsCheck;
 
 
     //比Start()先执行
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        physicsCheck = GetComponent<PhysicsCheck>();
         //创建一个实例
         inputControl = new PlayerInputControl();
         inputControl.GamePlay.Jump.started += Jump;
@@ -69,6 +71,9 @@ public class PlayerController : MonoBehaviour
     //跳跃
     private void Jump(InputAction.CallbackContext obj)
     {
-        rb.AddForce(transform.up * jumpFore,ForceMode2D.Impulse);
+        if (physicsCheck.isGround)
+        {
+            rb.AddForce(transform.up * jumpFore,ForceMode2D.Impulse);
+        }
     }
 }

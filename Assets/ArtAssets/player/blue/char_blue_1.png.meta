@@ -239,8 +239,8 @@ TextureImporter:
       name: char_blue_1_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 504
+        x: 336
+        y: 560
         width: 56
         height: 56
       alignment: 7
@@ -260,8 +260,8 @@ TextureImporter:
       name: char_blue_1_7
       rect:
         serializedVersion: 2
-        x: 56
-        y: 504
+        x: 392
+        y: 560
         width: 56
         height: 56
       alignment: 7
@@ -281,7 +281,7 @@ TextureImporter:
       name: char_blue_1_8
       rect:
         serializedVersion: 2
-        x: 112
+        x: 0
         y: 504
         width: 56
         height: 56
@@ -302,7 +302,7 @@ TextureImporter:
       name: char_blue_1_9
       rect:
         serializedVersion: 2
-        x: 168
+        x: 56
         y: 504
         width: 56
         height: 56
@@ -323,7 +323,7 @@ TextureImporter:
       name: char_blue_1_10
       rect:
         serializedVersion: 2
-        x: 224
+        x: 112
         y: 504
         width: 56
         height: 56
@@ -344,7 +344,7 @@ TextureImporter:
       name: char_blue_1_11
       rect:
         serializedVersion: 2
-        x: 280
+        x: 168
         y: 504
         width: 56
         height: 56
@@ -365,7 +365,7 @@ TextureImporter:
       name: char_blue_1_12
       rect:
         serializedVersion: 2
-        x: 336
+        x: 224
         y: 504
         width: 56
         height: 56
@@ -386,7 +386,7 @@ TextureImporter:
       name: char_blue_1_13
       rect:
         serializedVersion: 2
-        x: 392
+        x: 280
         y: 504
         width: 56
         height: 56
@@ -407,8 +407,8 @@ TextureImporter:
       name: char_blue_1_14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 448
+        x: 336
+        y: 504
         width: 56
         height: 56
       alignment: 7
@@ -428,8 +428,8 @@ TextureImporter:
       name: char_blue_1_15
       rect:
         serializedVersion: 2
-        x: 56
-        y: 448
+        x: 392
+        y: 504
         width: 56
         height: 56
       alignment: 7
@@ -449,7 +449,7 @@ TextureImporter:
       name: char_blue_1_16
       rect:
         serializedVersion: 2
-        x: 112
+        x: 0
         y: 448
         width: 56
         height: 56
@@ -470,7 +470,7 @@ TextureImporter:
       name: char_blue_1_17
       rect:
         serializedVersion: 2
-        x: 168
+        x: 56
         y: 448
         width: 56
         height: 56
@@ -491,7 +491,7 @@ TextureImporter:
       name: char_blue_1_18
       rect:
         serializedVersion: 2
-        x: 224
+        x: 112
         y: 448
         width: 56
         height: 56
@@ -512,7 +512,7 @@ TextureImporter:
       name: char_blue_1_19
       rect:
         serializedVersion: 2
-        x: 280
+        x: 168
         y: 448
         width: 56
         height: 56
@@ -533,7 +533,7 @@ TextureImporter:
       name: char_blue_1_20
       rect:
         serializedVersion: 2
-        x: 336
+        x: 224
         y: 448
         width: 56
         height: 56
@@ -554,7 +554,7 @@ TextureImporter:
       name: char_blue_1_21
       rect:
         serializedVersion: 2
-        x: 392
+        x: 280
         y: 448
         width: 56
         height: 56
@@ -575,8 +575,8 @@ TextureImporter:
       name: char_blue_1_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 392
+        x: 336
+        y: 448
         width: 56
         height: 56
       alignment: 7
@@ -596,8 +596,8 @@ TextureImporter:
       name: char_blue_1_23
       rect:
         serializedVersion: 2
-        x: 56
-        y: 392
+        x: 392
+        y: 448
         width: 56
         height: 56
       alignment: 7
@@ -617,7 +617,7 @@ TextureImporter:
       name: char_blue_1_24
       rect:
         serializedVersion: 2
-        x: 112
+        x: 0
         y: 392
         width: 56
         height: 56
@@ -638,7 +638,7 @@ TextureImporter:
       name: char_blue_1_25
       rect:
         serializedVersion: 2
-        x: 168
+        x: 56
         y: 392
         width: 56
         height: 56
@@ -659,7 +659,7 @@ TextureImporter:
       name: char_blue_1_26
       rect:
         serializedVersion: 2
-        x: 224
+        x: 112
         y: 392
         width: 56
         height: 56
@@ -680,7 +680,7 @@ TextureImporter:
       name: char_blue_1_27
       rect:
         serializedVersion: 2
-        x: 280
+        x: 168
         y: 392
         width: 56
         height: 56
@@ -701,7 +701,7 @@ TextureImporter:
       name: char_blue_1_28
       rect:
         serializedVersion: 2
-        x: 336
+        x: 224
         y: 392
         width: 56
         height: 56
@@ -722,7 +722,7 @@ TextureImporter:
       name: char_blue_1_29
       rect:
         serializedVersion: 2
-        x: 392
+        x: 280
         y: 392
         width: 56
         height: 56
@@ -743,8 +743,8 @@ TextureImporter:
       name: char_blue_1_30
       rect:
         serializedVersion: 2
-        x: 0
-        y: 336
+        x: 336
+        y: 392
         width: 56
         height: 56
       alignment: 7
@@ -764,8 +764,8 @@ TextureImporter:
       name: char_blue_1_31
       rect:
         serializedVersion: 2
-        x: 56
-        y: 336
+        x: 392
+        y: 392
         width: 56
         height: 56
       alignment: 7
@@ -785,7 +785,7 @@ TextureImporter:
       name: char_blue_1_32
       rect:
         serializedVersion: 2
-        x: 112
+        x: 0
         y: 336
         width: 56
         height: 56
@@ -806,7 +806,7 @@ TextureImporter:
       name: char_blue_1_33
       rect:
         serializedVersion: 2
-        x: 168
+        x: 56
         y: 336
         width: 56
         height: 56
@@ -827,7 +827,7 @@ TextureImporter:
       name: char_blue_1_34
       rect:
         serializedVersion: 2
-        x: 224
+        x: 112
         y: 336
         width: 56
         height: 56
@@ -848,7 +848,7 @@ TextureImporter:
       name: char_blue_1_35
       rect:
         serializedVersion: 2
-        x: 280
+        x: 168
         y: 336
         width: 56
         height: 56
@@ -869,7 +869,7 @@ TextureImporter:
       name: char_blue_1_36
       rect:
         serializedVersion: 2
-        x: 336
+        x: 224
         y: 336
         width: 56
         height: 56
@@ -890,7 +890,7 @@ TextureImporter:
       name: char_blue_1_37
       rect:
         serializedVersion: 2
-        x: 392
+        x: 280
         y: 336
         width: 56
         height: 56
@@ -911,8 +911,8 @@ TextureImporter:
       name: char_blue_1_38
       rect:
         serializedVersion: 2
-        x: 0
-        y: 280
+        x: 336
+        y: 336
         width: 56
         height: 56
       alignment: 7
@@ -932,8 +932,8 @@ TextureImporter:
       name: char_blue_1_39
       rect:
         serializedVersion: 2
-        x: 56
-        y: 280
+        x: 392
+        y: 336
         width: 56
         height: 56
       alignment: 7
@@ -953,7 +953,7 @@ TextureImporter:
       name: char_blue_1_40
       rect:
         serializedVersion: 2
-        x: 112
+        x: 0
         y: 280
         width: 56
         height: 56
@@ -974,7 +974,7 @@ TextureImporter:
       name: char_blue_1_41
       rect:
         serializedVersion: 2
-        x: 168
+        x: 56
         y: 280
         width: 56
         height: 56
@@ -995,8 +995,8 @@ TextureImporter:
       name: char_blue_1_42
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224
+        x: 112
+        y: 280
         width: 56
         height: 56
       alignment: 7
@@ -1016,8 +1016,8 @@ TextureImporter:
       name: char_blue_1_43
       rect:
         serializedVersion: 2
-        x: 56
-        y: 224
+        x: 168
+        y: 280
         width: 56
         height: 56
       alignment: 7
@@ -1037,8 +1037,8 @@ TextureImporter:
       name: char_blue_1_44
       rect:
         serializedVersion: 2
-        x: 112
-        y: 224
+        x: 224
+        y: 280
         width: 56
         height: 56
       alignment: 7
@@ -1058,8 +1058,8 @@ TextureImporter:
       name: char_blue_1_45
       rect:
         serializedVersion: 2
-        x: 168
-        y: 224
+        x: 280
+        y: 280
         width: 56
         height: 56
       alignment: 7
@@ -1079,8 +1079,8 @@ TextureImporter:
       name: char_blue_1_46
       rect:
         serializedVersion: 2
-        x: 224
-        y: 224
+        x: 336
+        y: 280
         width: 56
         height: 56
       alignment: 7
@@ -1100,8 +1100,8 @@ TextureImporter:
       name: char_blue_1_47
       rect:
         serializedVersion: 2
-        x: 280
-        y: 224
+        x: 392
+        y: 280
         width: 56
         height: 56
       alignment: 7
@@ -1121,7 +1121,7 @@ TextureImporter:
       name: char_blue_1_48
       rect:
         serializedVersion: 2
-        x: 336
+        x: 0
         y: 224
         width: 56
         height: 56
@@ -1142,7 +1142,7 @@ TextureImporter:
       name: char_blue_1_49
       rect:
         serializedVersion: 2
-        x: 392
+        x: 56
         y: 224
         width: 56
         height: 56
@@ -1163,8 +1163,8 @@ TextureImporter:
       name: char_blue_1_50
       rect:
         serializedVersion: 2
-        x: 0
-        y: 168
+        x: 112
+        y: 224
         width: 56
         height: 56
       alignment: 7
@@ -1184,8 +1184,8 @@ TextureImporter:
       name: char_blue_1_51
       rect:
         serializedVersion: 2
-        x: 56
-        y: 168
+        x: 168
+        y: 224
         width: 56
         height: 56
       alignment: 7
@@ -1205,8 +1205,8 @@ TextureImporter:
       name: char_blue_1_52
       rect:
         serializedVersion: 2
-        x: 112
-        y: 168
+        x: 224
+        y: 224
         width: 56
         height: 56
       alignment: 7
@@ -1226,8 +1226,8 @@ TextureImporter:
       name: char_blue_1_53
       rect:
         serializedVersion: 2
-        x: 168
-        y: 168
+        x: 280
+        y: 224
         width: 56
         height: 56
       alignment: 7
@@ -1247,8 +1247,8 @@ TextureImporter:
       name: char_blue_1_54
       rect:
         serializedVersion: 2
-        x: 0
-        y: 112
+        x: 336
+        y: 224
         width: 56
         height: 56
       alignment: 7
@@ -1268,8 +1268,8 @@ TextureImporter:
       name: char_blue_1_55
       rect:
         serializedVersion: 2
-        x: 56
-        y: 112
+        x: 392
+        y: 224
         width: 56
         height: 56
       alignment: 7
@@ -1289,8 +1289,8 @@ TextureImporter:
       name: char_blue_1_56
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
+        x: 0
+        y: 168
         width: 56
         height: 56
       alignment: 7
@@ -1310,8 +1310,8 @@ TextureImporter:
       name: char_blue_1_57
       rect:
         serializedVersion: 2
-        x: 168
-        y: 112
+        x: 56
+        y: 168
         width: 56
         height: 56
       alignment: 7
@@ -1331,8 +1331,8 @@ TextureImporter:
       name: char_blue_1_58
       rect:
         serializedVersion: 2
-        x: 224
-        y: 112
+        x: 112
+        y: 168
         width: 56
         height: 56
       alignment: 7
@@ -1352,8 +1352,8 @@ TextureImporter:
       name: char_blue_1_59
       rect:
         serializedVersion: 2
-        x: 280
-        y: 112
+        x: 168
+        y: 168
         width: 56
         height: 56
       alignment: 7
@@ -1373,8 +1373,8 @@ TextureImporter:
       name: char_blue_1_60
       rect:
         serializedVersion: 2
-        x: 336
-        y: 112
+        x: 224
+        y: 168
         width: 56
         height: 56
       alignment: 7
@@ -1394,8 +1394,8 @@ TextureImporter:
       name: char_blue_1_61
       rect:
         serializedVersion: 2
-        x: 392
-        y: 112
+        x: 280
+        y: 168
         width: 56
         height: 56
       alignment: 7
@@ -1415,8 +1415,8 @@ TextureImporter:
       name: char_blue_1_62
       rect:
         serializedVersion: 2
-        x: 0
-        y: 56
+        x: 336
+        y: 168
         width: 56
         height: 56
       alignment: 7
@@ -1436,8 +1436,8 @@ TextureImporter:
       name: char_blue_1_63
       rect:
         serializedVersion: 2
-        x: 56
-        y: 56
+        x: 392
+        y: 168
         width: 56
         height: 56
       alignment: 7
@@ -1457,8 +1457,8 @@ TextureImporter:
       name: char_blue_1_64
       rect:
         serializedVersion: 2
-        x: 112
-        y: 56
+        x: 0
+        y: 112
         width: 56
         height: 56
       alignment: 7
@@ -1478,8 +1478,8 @@ TextureImporter:
       name: char_blue_1_65
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 56
+        y: 112
         width: 56
         height: 56
       alignment: 7
@@ -1499,8 +1499,8 @@ TextureImporter:
       name: char_blue_1_66
       rect:
         serializedVersion: 2
-        x: 56
-        y: 0
+        x: 112
+        y: 112
         width: 56
         height: 56
       alignment: 7
@@ -1520,8 +1520,8 @@ TextureImporter:
       name: char_blue_1_67
       rect:
         serializedVersion: 2
-        x: 112
-        y: 0
+        x: 168
+        y: 112
         width: 56
         height: 56
       alignment: 7
@@ -1533,6 +1533,426 @@ TextureImporter:
       bones: []
       spriteID: 917bebb5ca0604044a287d2c653b174c
       internalID: -643843221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_68
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2179c5b4c393b1540923076dd2030b7a
+      internalID: -1953094437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_69
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 112
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727c0a785fae8204ba94637f5b33dd86
+      internalID: 1644940492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_70
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 112
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94c05e04b8f030468b14b484d5da559
+      internalID: -1860227337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_71
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 112
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc90c5d6e51445345b745bc9429b9fa8
+      internalID: 426101319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353df2931cb86374781b4e4344812c5c
+      internalID: 616434401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_73
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8efd3d4f67a9a7642920a2ba18c69341
+      internalID: 1306634277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_74
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 56
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fb955c8d56c4344a31ed9ab8817df9
+      internalID: -1363116686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_75
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 56
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87996b83ceffb2040a6e58d0f59fda38
+      internalID: 470475435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_76
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 56
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b5eeb24e3c95d44bec0c7b6446dd76
+      internalID: -1196774786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_77
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 56
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db887b8d2186423478b32987ba2bbd2c
+      internalID: -1122896573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_78
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 56
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1cf55d9777f224a86fc74de6921976
+      internalID: 1914822948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_79
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 56
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d281374afccbfd458efc417b231b4fd
+      internalID: 1679677011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fe153c6fa787f48b48096af11a1a41
+      internalID: 1594222801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_81
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a1d181bb825214db1f08a179b10f03
+      internalID: 1680814842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_82
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c9eb38f69e77444a2e48fefa5b000d
+      internalID: 1381380961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_83
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671c96f75b838914dbff4030f82b03ec
+      internalID: -396844603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_84
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7481ef0d559ec854a896e0ab01f4fb98
+      internalID: -750951076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_85
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6039ea93382b2141a74787e60bc747f
+      internalID: 988110268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_86
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4119f5fae902b7d43ba0ea13783eb690
+      internalID: -1170045462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_blue_1_87
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962c71e5ee9353d4aac3a66b298d4f81
+      internalID: 963179203
       vertices: []
       indices: 
       edges: []
@@ -1613,8 +2033,28 @@ TextureImporter:
       char_blue_1_65: -457875966
       char_blue_1_66: -290087164
       char_blue_1_67: -643843221
+      char_blue_1_68: -1953094437
+      char_blue_1_69: 1644940492
       char_blue_1_7: 725160269
+      char_blue_1_70: -1860227337
+      char_blue_1_71: 426101319
+      char_blue_1_72: 616434401
+      char_blue_1_73: 1306634277
+      char_blue_1_74: -1363116686
+      char_blue_1_75: 470475435
+      char_blue_1_76: -1196774786
+      char_blue_1_77: -1122896573
+      char_blue_1_78: 1914822948
+      char_blue_1_79: 1679677011
       char_blue_1_8: -291636784
+      char_blue_1_80: 1594222801
+      char_blue_1_81: 1680814842
+      char_blue_1_82: 1381380961
+      char_blue_1_83: -396844603
+      char_blue_1_84: -750951076
+      char_blue_1_85: 988110268
+      char_blue_1_86: -1170045462
+      char_blue_1_87: 963179203
       char_blue_1_9: -2031369015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
