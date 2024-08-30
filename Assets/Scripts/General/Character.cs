@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 //人物属性数值计算
 public class Character : MonoBehaviour
@@ -22,6 +23,11 @@ public class Character : MonoBehaviour
     
     //计算器状态
     public bool invulnerab;
+    
+    //自定义unity中的事件--受伤
+    public UnityEvent<Transform> onTakeDamage;
+    //死亡时触发的事件栈
+    public UnityEvent OnDie;
 
     private void Start()
     {
@@ -54,11 +60,14 @@ public class Character : MonoBehaviour
             //当前血量减去伤害
             currentHealth -= attack.damage;
             TriggerInvulnerable();
+            //执行受伤动画
+            onTakeDamage?.Invoke(attack.transform);
         }
         else
         {
             currentHealth = 0;
             //触发死亡
+            OnDie.Invoke();
         }
        
     }

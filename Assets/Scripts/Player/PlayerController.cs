@@ -15,7 +15,14 @@ public class PlayerController : MonoBehaviour
     
     private Rigidbody2D rb;
     private PhysicsCheck physicsCheck;
-
+    
+    //受伤反弹的一个力
+    public float hurtForce;
+    //受伤状态
+    public bool isHurt;
+    //死亡状态
+    public bool isDead;
+    
 
     //比Start()先执行
     private void Awake()
@@ -48,7 +55,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if (!isHurt)
+        {
+            Move(); 
+        }
     }
 
     public void Move()
@@ -75,5 +85,26 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(transform.up * jumpFore,ForceMode2D.Impulse);
         }
+    }
+
+    //受伤时
+    public void GetHurt(Transform attacker)
+    {
+        isHurt = true;
+        //降速
+        rb.velocity = Vector2.zero;
+        //反弹(人物的坐标-攻击者的坐标)
+        Vector2 dir = new Vector2((transform.position.x - attacker.position.x),0).normalized;
+        
+        //添加一个顺时的力
+        rb.AddForce(dir * hurtForce,ForceMode2D.Impulse);
+    }
+
+    //
+    public void PlayerDead()
+    {
+        isDead = true;
+        //关掉输入系统
+        inputControl.GamePlay.Disable();
     }
 }
