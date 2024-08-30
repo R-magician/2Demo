@@ -24,18 +24,25 @@ public class PlayerAnimation : MonoBehaviour
         SetAnimator();
     }
 
-    //动画切换
+    //动画切换--外部参数传入到动画器里面的参数-实时
     public void SetAnimator()
     {
         anim.SetFloat("velocityX",MathF.Abs(rb.velocity.x));
         anim.SetFloat("velocityY",rb.velocity.y);
         anim.SetBool("isGround",physicsCheck.isGround);
         anim.SetBool("isDead",playerController.isDead);
+        anim.SetBool("isAttack",playerController.isAttack);
     }
 
-    //人物受伤
+    //人物受伤--自动改变
     public void PlayHurt()
     {
         anim.SetTrigger("hurt");
+    }
+
+    //人物攻击--自动改变
+    public void PlayerAttack()
+    {
+        anim.SetTrigger("attack");
     }
 }
