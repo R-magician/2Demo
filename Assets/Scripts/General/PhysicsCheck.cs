@@ -51,21 +51,21 @@ public class PhysicsCheck : MonoBehaviour
     public void Check()
     {
         //检测地面状态
-        isGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, checkRaduis, groundLayer);
+        isGround = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(bottomOffset.x * transform.localScale.x,bottomOffset.y), checkRaduis, groundLayer);
         
         //墙体的判断
-        touchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, checkRaduis, groundLayer);
-        touchRightWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, checkRaduis, groundLayer);
+        touchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(leftOffset.x,leftOffset.y) , checkRaduis, groundLayer);
+        touchRightWall = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(rightOffset.x,rightOffset.y) , checkRaduis, groundLayer);
         
     }
 
     private void OnDrawGizmosSelected()
     {
         //来可视化这个技能的影响范围，确保其效果符合预期--绘制地板检测范围
-        Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset ,checkRaduis);
+        Gizmos.DrawWireSphere((Vector2)transform.position + new Vector2(bottomOffset.x * transform.localScale.x,bottomOffset.y) ,checkRaduis);
         //绘制左侧检测范围
-        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset ,checkRaduis);
+        Gizmos.DrawWireSphere((Vector2)transform.position + new Vector2(leftOffset.x,leftOffset.y) ,checkRaduis);
         //绘制右侧检测范围
-        Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset ,checkRaduis);
+        Gizmos.DrawWireSphere((Vector2)transform.position + new Vector2(rightOffset.x,rightOffset.y)  ,checkRaduis);
     }
 }
