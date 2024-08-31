@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 334501435}
   - component: {fileID: 334501434}
   - component: {fileID: 334501436}
+  - component: {fileID: 334501438}
   m_Layer: 8
   m_Name: Boar
   m_TagString: Untagged
@@ -475,6 +476,9 @@ MonoBehaviour:
   chaseSpeed: 260
   currentSpeed: 0
   faceDir: {x: 0, y: 0, z: 0}
+  waitTime: 2
+  waitTimeConter: 0
+  wait: 0
 --- !u!95 &334501437
 Animator:
   serializedVersion: 5
@@ -496,6 +500,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &334501438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334501428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac03b40264ba1e04ab2adfcc8a953fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manual: 1
+  bottomOffset: {x: 0, y: 0}
+  leftOffset: {x: -0.85, y: 0.5}
+  rightOffset: {x: 0.75, y: 0.5}
+  checkRaduis: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  isGround: 0
+  touchLeftWall: 0
+  touchRightWall: 0
 --- !u!1 &382813185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,7 +2107,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -2361,7 +2388,7 @@ Transform:
   m_GameObject: {fileID: 1598916992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.054, y: -2.75, z: 0}
+  m_LocalPosition: {x: 3.07, y: -0.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2463,12 +2490,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac03b40264ba1e04ab2adfcc8a953fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manual: 0
   bottomOffset: {x: -0.05, y: 0}
+  leftOffset: {x: 0.4, y: 0.83}
+  rightOffset: {x: -0.6, y: 0.83}
   checkRaduis: 0.08
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   isGround: 0
+  touchLeftWall: 0
+  touchRightWall: 0
 --- !u!95 &1598916999
 Animator:
   serializedVersion: 5
