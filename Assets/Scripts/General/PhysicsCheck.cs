@@ -32,6 +32,7 @@ public class PhysicsCheck : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        //来可视化这个技能的影响范围，确保其效果符合预期
         Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset ,checkRaduis);
     }
 }
