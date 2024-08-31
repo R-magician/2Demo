@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour
     public float jumpFore;
     //受伤反弹的一个力
     public float hurtForce;
-    //攻击次数
-    public int comp;
 
     private Rigidbody2D rb;
     private PhysicsCheck physicsCheck;
