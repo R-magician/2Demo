@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Boar : Enemy
 {
-    public override void Move()
+    //复写父类中的方法
+    protected override void Awake()
     {
-        base.Move();
-        anim.SetBool("walk",true);
+        base.Awake();
+        //new 一个野猪的巡逻模式
+        patrolState = new BoarPatrolState();
     }
 }

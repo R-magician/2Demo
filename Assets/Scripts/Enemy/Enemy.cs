@@ -6,8 +6,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     protected Rigidbody2D rb;
-    protected Animator anim;
-    private PhysicsCheck physicsCheck;
+    [HideInInspector] public Animator anim;
+    [HideInInspector] public PhysicsCheck physicsCheck;
 
     [Header("基本参数")]
     //基本的移动速度
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     public float chaseSpeed;
 
     //当前的速度
-    public float currentSpeed;
+    [HideInInspector] public float currentSpeed;
 
     //移动的方向
     public Vector3 faceDir;
@@ -41,10 +41,21 @@ public class Enemy : MonoBehaviour
     [Header("状态")]
     //受伤
     public bool isHurt;
+
     //死亡
     public bool isDead;
 
-    private void Awake()
+    //当前状态
+    protected BaseState currentState;
+
+    //巡逻状态
+    protected BaseState patrolState;
+
+    //追击状态
+    protected BaseState chaseState;
+
+    //父类里面写一个虚拟的，字类里面复写
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -53,29 +64,37 @@ public class Enemy : MonoBehaviour
         waitTimeConter = waitTime;
     }
 
+    //启用时调用
+    private void OnEnable()
+    {
+        currentState = patrolState;
+        currentState.OnEnter(this);
+    }
+
     private void Update()
     {
         //获取移动的方向
         faceDir = new Vector3(-transform.localScale.x, 0, 0);
 
-        //如果碰到两侧的墙，角色翻转
-        if ((physicsCheck.touchLeftWall && faceDir.x < 0) || (physicsCheck.touchRightWall && faceDir.x > 0))
-        {
-            wait = true;
-            //关闭走路，开始等待
-            anim.SetBool("walk", false);
-        }
-
         //延时转身
         TimeCounter();
+        currentState.LogicUpdate();
     }
 
     private void FixedUpdate()
     {
-        if (!isHurt && !isDead)
+        //没有受伤死亡和等待才移动
+        if (!isHurt && !isDead && !wait)
         {
             Move();
         }
+
+        currentState.PhysicsUpdate();
+    }
+
+    private void OnDisable()
+    {
+        currentState.OnExit();
     }
 
     //移动
@@ -119,7 +138,7 @@ public class Enemy : MonoBehaviour
         anim.SetTrigger("hurt");
         //击退方向
         Vector2 dir = new Vector2(transform.position.x - attackTrans.position.x, 0).normalized;
-        
+
         //开启携程
         StartCoroutine(OnHurt(dir));
     }
@@ -140,14 +159,14 @@ public class Enemy : MonoBehaviour
     {
         //改变图层为ignore
         gameObject.layer = 2;
-        anim.SetBool("dead",true);
+        anim.SetBool("dead", true);
         isDead = true;
     }
-    
+
     //执行销毁
     public void DestroyAfterAnimation()
     {
         //销毁这个物品
-        Destroy(this.gameObject);  
+        Destroy(this.gameObject);
     }
 }
