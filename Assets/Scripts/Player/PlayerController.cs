@@ -112,9 +112,14 @@ public class PlayerController : MonoBehaviour
     //攻击
     private void PlayerAttack(InputAction.CallbackContext obj)
     {
-        //改变动画器里面的参数值
-        playerAnimation.PlayerAttack();
-        isAttack = true;
+        //不在地面上，不能攻击
+        if (physicsCheck.isGround)
+        {
+            //改变动画器里面的参数值
+            playerAnimation.PlayerAttack();
+            isAttack = true;
+        }
+        
     }
 
     #region UnityEvent里面触发的
