@@ -75,10 +75,10 @@ public class Enemy : MonoBehaviour
     {
         //获取移动的方向
         faceDir = new Vector3(-transform.localScale.x, 0, 0);
-
+        
+        currentState.LogicUpdate();
         //延时转身
         TimeCounter();
-        currentState.LogicUpdate();
     }
 
     private void FixedUpdate()
