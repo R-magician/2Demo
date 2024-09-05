@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
     public void Move()
     {
-        rb.velocity = new Vector2(inputDirection.x * speed * Time.deltaTime, rb.velocity.y);
+        rb.linearVelocity = new Vector2(inputDirection.x * speed * Time.deltaTime, rb.linearVelocity.y);
 
         int faceDir = (int)transform.localScale.x;
         if (inputDirection.x > 0)
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
     {
         isHurt = true;
         //降速
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         //反弹(人物的坐标-攻击者的坐标)
         Vector2 dir = new Vector2((transform.position.x - attacker.position.x), 0).normalized;
 

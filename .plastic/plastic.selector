@@ -1,0 +1,4 @@
+repository "CIUPT@wechat_os_qy0ww6xc2yyelk_28vlsdj6ba@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"

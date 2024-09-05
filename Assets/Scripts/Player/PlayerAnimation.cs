@@ -27,8 +27,8 @@ public class PlayerAnimation : MonoBehaviour
     //动画切换--外部参数传入到动画器里面的参数-实时
     public void SetAnimator()
     {
-        anim.SetFloat("velocityX",MathF.Abs(rb.velocity.x));
-        anim.SetFloat("velocityY",rb.velocity.y);
+        anim.SetFloat("velocityX",MathF.Abs(rb.linearVelocity.x));
+        anim.SetFloat("velocityY",rb.linearVelocity.y);
         anim.SetBool("isGround",physicsCheck.isGround);
         anim.SetBool("isDead",playerController.isDead);
         anim.SetBool("isAttack",playerController.isAttack);
