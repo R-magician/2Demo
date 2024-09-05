@@ -10,5 +10,7 @@ public class Boar : Enemy
         base.Awake();
         //new 一个野猪的巡逻模式
         patrolState = new BoarPatrolState();
+        //追击状态
+        chaseState = new BoarChaseState();
     }
 }
