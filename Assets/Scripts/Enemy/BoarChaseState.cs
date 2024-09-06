@@ -1,3 +1,4 @@
+//野猪追击状态
 using UnityEngine;
 
 public class BoarChaseState : BaseState

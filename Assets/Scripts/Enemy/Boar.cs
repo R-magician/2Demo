@@ -1,3 +1,4 @@
+//野猪类，要继承敌人类
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,4 +1,4 @@
-
+//敌人切换状态继承抽象类
 public abstract class BaseState
 {
     //当前对象

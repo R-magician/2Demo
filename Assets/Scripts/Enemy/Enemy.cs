@@ -1,3 +1,4 @@
+//敌人基本类
 using System;
 using System.Collections;
 using System.Collections.Generic;

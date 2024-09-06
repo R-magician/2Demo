@@ -1,3 +1,4 @@
+//玩家，敌人属性
 using System;
 using System.Collections;
 using System.Collections.Generic;
