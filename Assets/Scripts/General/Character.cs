@@ -23,6 +23,9 @@ public class Character : MonoBehaviour
     
     //计算器状态
     public bool invulnerab;
+
+    //触发轻量级的对象类型的订阅--在面板上把事件广播出去-其他代码进行事件监听
+    public UnityEvent<Character> OnHealthChange;
     
     //自定义unity中的事件--受伤
     public UnityEvent<Transform> onTakeDamage;
@@ -32,6 +35,8 @@ public class Character : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        //更新UI
+        OnHealthChange.Invoke(this);
     }
 
     private void Update()
@@ -59,9 +64,10 @@ public class Character : MonoBehaviour
         {
             //当前血量减去伤害
             currentHealth -= attack.damage;
-            TriggerInvulnerable();
             //执行受伤动画
             onTakeDamage?.Invoke(attack.transform);
+            TriggerInvulnerable();
+            
         }
         else
         {
@@ -69,7 +75,8 @@ public class Character : MonoBehaviour
             //触发死亡
             OnDie.Invoke();
         }
-       
+        //更新UI
+        OnHealthChange?.Invoke(this);
     }
     
     //触发无敌时间
