@@ -1,4 +1,4 @@
-//资产--进行UI数据更新
+//创建有参数的发布/订阅
 using UnityEngine;
 using UnityEngine.Events;
 
