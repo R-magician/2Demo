@@ -83,6 +83,7 @@ public class Sign : MonoBehaviour
         {
             //执行chest实现的接口方法
             targetItem.TriggerAction();
+            GetComponent<AudioDefination>()?.PlayAudioClip();
         }
     }
 }

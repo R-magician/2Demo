@@ -107,6 +107,7 @@ public class PlayerController : MonoBehaviour
         if (physicsCheck.isGround)
         {
             rb.AddForce(transform.up * jumpFore, ForceMode2D.Impulse);
+            GetComponent<AudioDefination>().PlayAudioClip();
         }
     }
 
