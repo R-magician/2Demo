@@ -52,6 +52,20 @@ public class Character : MonoBehaviour
         }
     }
 
+    //开始触发碰撞器
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        //判断触发器是不是water标签
+        if (other.CompareTag("water"))
+        {
+            currentHealth = 0;
+            //死亡更新血量
+            OnDie?.Invoke();
+            //更新UI
+            OnHealthChange?.Invoke(this);
+        }
+    }
+
     //受伤计算
     public void TakeDamage(Attack attack)
     {
