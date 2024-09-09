@@ -14,6 +14,8 @@ public class Sign : MonoBehaviour
     public Transform playerTrans;
     //获取子物体
     public GameObject signSprite;
+
+    private IInteractable targetItem;
     //子物体是否激活
     private bool canPress;
 
@@ -28,6 +30,7 @@ public class Sign : MonoBehaviour
     private void OnEnable()
     {
         InputSystem.onActionChange += OnActionChange;
+        playerInput.GamePlay.Confirm.started += OnConfirm;
     }
 
     private void Update()
@@ -42,6 +45,8 @@ public class Sign : MonoBehaviour
         if (other.CompareTag("interactable"))
         {
             canPress = true;
+            //获取到挂载IInteractable接口的组件（chest）
+            targetItem = other.GetComponent<IInteractable>();
         }
     }
 
@@ -69,6 +74,15 @@ public class Sign : MonoBehaviour
                     anim.Play("ps");
                     break;
             }
+        }
+    }
+    //当按键按下操作的方法
+    private void OnConfirm(InputAction.CallbackContext obj)
+    {
+        if (canPress)
+        {
+            //执行chest实现的接口方法
+            targetItem.TriggerAction();
         }
     }
 }
