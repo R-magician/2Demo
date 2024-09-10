@@ -22,6 +22,8 @@ public class SceneLoader : MonoBehaviour
     
     [Header("广播切换场景")]
     public VoidEventSO afterSceneLoadedEvent;
+
+    public FadeEventSO fadeEvent;
     
     //当前加载的场景
     [SerializeField]private GameSceneSO currentLoadedScene;
@@ -103,7 +105,8 @@ public class SceneLoader : MonoBehaviour
     {
         if (fadeScreen)
         {
-            //实现渐隐渐显
+            //场景逐渐变黑
+            fadeEvent.FadeIn(fadeDuration); 
         }
 
         yield return new WaitForSeconds(fadeDuration);
