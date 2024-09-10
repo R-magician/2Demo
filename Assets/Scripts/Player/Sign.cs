@@ -33,9 +33,15 @@ public class Sign : MonoBehaviour
         playerInput.GamePlay.Confirm.started += OnConfirm;
     }
 
+    private void OnDisable()
+    {
+        //关闭图标
+        canPress = false;
+    }
+
     private void Update()
     {
-        //显示子物体
+        //更新子物体显示状态
         signSprite.GetComponent<SpriteRenderer>().enabled = canPress;
         signSprite.transform.localScale = playerTrans.localScale;
     }

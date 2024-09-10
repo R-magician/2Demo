@@ -7,6 +7,9 @@ using Cinemachine;
 
 public class CameraControl : MonoBehaviour
 {
+    [Header("添加场景加载监听")]
+    public VoidEventSO afterSceneLoadedEvent;
+    
     //获取相机跟随最大范围
     private CinemachineConfiner2D confiner2D;
     //获取冲击
@@ -23,11 +26,19 @@ public class CameraControl : MonoBehaviour
     private void OnEnable()
     {
         camearShakeEvent.OnEventRaised += OnCamerShakeEvent;
+        afterSceneLoadedEvent.OnEventRaised += OnAfterSceneLoaded;
     }
 
     private void OnDisable()
     {
         camearShakeEvent.OnEventRaised -= OnCamerShakeEvent;
+        afterSceneLoadedEvent.OnEventRaised -= OnAfterSceneLoaded;
+    }
+
+    private void OnAfterSceneLoaded()
+    {
+        //获取摄像机的边界
+        GetNewCameraBounds();
     }
 
     //监听订阅
@@ -36,12 +47,11 @@ public class CameraControl : MonoBehaviour
         //播放摄像机的震动
         impulseSource.GenerateImpulse();
     }
-
-    //场景切换后更改
-    private void Start()
-    {
-        GetNewCameraBounds();
-    }
+    
+    // private void Start()
+    // {
+    //     GetNewCameraBounds();
+    // }
 
     //获取所有场景中的相机最大移动范围
     private void GetNewCameraBounds()
