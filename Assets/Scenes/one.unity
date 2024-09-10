@@ -209,7 +209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef34a1b901eb2944ba5f1092d08f9824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionToGo: {x: 25.03, y: -1.29, z: 0}
+  LoadEventSo: {fileID: 11400000, guid: feb667eebc1bd2d47a5590b36c064069, type: 2}
+  sceneToGO: {fileID: 11400000, guid: e9725e9d247c3df46913e753c36c90f1, type: 2}
+  positionToGo: {x: 21.35, y: -1.29, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
