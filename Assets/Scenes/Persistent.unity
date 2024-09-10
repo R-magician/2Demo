@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142b20d6770fe8f4896014bcb4755cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeEvent: {fileID: 11400000, guid: 7127697ac9a32e74a9c6550488e84c60, type: 2}
   fadeImage: {fileID: 1817243065}
 --- !u!1 &203624162
 GameObject:
@@ -1811,8 +1812,9 @@ MonoBehaviour:
   LoadEventSo: {fileID: 11400000, guid: feb667eebc1bd2d47a5590b36c064069, type: 2}
   firstLoadScene: {fileID: 11400000, guid: 2dda176fd60add04592bf6e739d9308a, type: 2}
   afterSceneLoadedEvent: {fileID: 11400000, guid: 47fa116c3ab88ef44a9698feb49d93fd, type: 2}
+  fadeEvent: {fileID: 11400000, guid: 7127697ac9a32e74a9c6550488e84c60, type: 2}
   currentLoadedScene: {fileID: 0}
-  fadeDuration: 0
+  fadeDuration: 0.5
 --- !u!1 &1409002498
 GameObject:
   m_ObjectHideFlags: 0

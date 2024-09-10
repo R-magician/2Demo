@@ -26,6 +26,7 @@ public class FadeEventSO : ScriptableObject
       RaiseEvent(Color.clear,duration,false);
    }
 
+   //bool这个参数没用
    public void RaiseEvent(Color target, float duration, bool fadeIn)
    {
       OnEventRaised?.Invoke(target,duration,fadeIn);

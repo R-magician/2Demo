@@ -146,6 +146,7 @@ public class SceneLoader : MonoBehaviour
         if (fadeScreen)
         {
             //有渐入渐出的效果
+            fadeEvent.FadeOut(fadeDuration);
         }
 
         //场景加载完成
