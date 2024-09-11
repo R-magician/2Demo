@@ -8,6 +8,10 @@ using UnityEngine.Events;
 //人物属性数值计算
 public class Character : MonoBehaviour
 {
+    [Header("监听事件")]
+    //新的开始
+    public VoidEventSO newGameEvent;
+    
     [Header("基本属性")]
     //最大血量
     public float maxHealth;
@@ -33,11 +37,22 @@ public class Character : MonoBehaviour
     //死亡时触发的事件栈
     public UnityEvent OnDie;
 
-    private void Start()
+    //开始游戏点击触发
+    private void NewGame()
     {
         currentHealth = maxHealth;
         //更新UI
         OnHealthChange.Invoke(this);
+    }
+
+    private void OnEnable()
+    {
+        newGameEvent.OnEventRaised += NewGame;
+    }
+
+    private void OnDisable()
+    {
+        newGameEvent.OnEventRaised -= NewGame;
     }
 
     private void Update()

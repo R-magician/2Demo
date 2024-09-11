@@ -12,19 +12,31 @@ public class SceneLoader : MonoBehaviour
 {
     //player 的transform
     public Transform playerTrans;
+    //开始坐标
+    public Vector3 menuPosition;
     //初始坐标
     public Vector3 firstPosition;
     
     [Header("事件的监听")]
+    //场景切换监听
     public SceneLoadEventSO LoadEventSo;
-    //加载的第一个场景
-    public GameSceneSO firstLoadScene;
+    //按钮切换监听
+    public VoidEventSO newGomeEvent;
     
     [Header("广播切换场景")]
     public VoidEventSO afterSceneLoadedEvent;
-
+    //渐入
     public FadeEventSO fadeEvent;
+    //场景卸载
+    public SceneLoadEventSO unloadedSceneEvent;
     
+    
+    
+    [Header("场景")]
+    //开始场景
+    public GameSceneSO menuScene;
+    //加载的第一个场景
+    public GameSceneSO firstLoadScene;
     //当前加载的场景
     [SerializeField]private GameSceneSO currentLoadedScene;
     //要去到的场景
@@ -38,31 +50,28 @@ public class SceneLoader : MonoBehaviour
     
     //获得渐隐渐出的等待时间
     public float fadeDuration;
-
-    private void Awake()
-    {
-        //加载第一个场景
-        //Addressables.LoadSceneAsync(firstLoadScene.sceneAsset, LoadSceneMode.Additive);
-        // currentLoadedScene = firstLoadScene;
-        // currentLoadedScene.sceneAsset.LoadSceneAsync(LoadSceneMode.Additive);
-    }
+    
 
     //TODU:做完MainMenu之后要改
     private void Start()
     {
-        NewGame();
+        //通过事件触发方法--加载主场景
+        LoadEventSo.RaiseLoadRequestEvent(menuScene,menuPosition,true);
     }
 
     private void OnEnable()
     {
         LoadEventSo.LoadRequestEvent += OnLoadRequestEvent;
+        newGomeEvent.OnEventRaised += NewGame;
     }
 
     private void OnDisable()
     {
         LoadEventSo.LoadRequestEvent -= OnLoadRequestEvent;
+        newGomeEvent.OnEventRaised -= NewGame;
     }
-
+    
+    
     private void NewGame()
     {
         sceneToLoad = firstLoadScene;
@@ -113,6 +122,10 @@ public class SceneLoader : MonoBehaviour
         }
 
         yield return new WaitForSeconds(fadeDuration);
+        
+        //广播调整血条显示
+        unloadedSceneEvent.RaiseLoadRequestEvent(sceneToLoad,positionTOGo,true);
+        
         //卸载场景
         yield return currentLoadedScene.sceneAsset.UnLoadScene();
 
