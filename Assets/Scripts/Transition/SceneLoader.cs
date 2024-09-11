@@ -66,7 +66,10 @@ public class SceneLoader : MonoBehaviour
     private void NewGame()
     {
         sceneToLoad = firstLoadScene;
-        OnLoadRequestEvent(sceneToLoad,firstPosition,true);
+        //直接调用方法
+        //OnLoadRequestEvent(sceneToLoad,firstPosition,true);
+        //通过事件触发方法
+        LoadEventSo.RaiseLoadRequestEvent(sceneToLoad,firstPosition,true);
     }
     
     /// <summary>
@@ -151,7 +154,12 @@ public class SceneLoader : MonoBehaviour
 
         //场景加载完成
         isLoading = false;
-        //播报
-        afterSceneLoadedEvent.RaiseEvent();
+
+        if (currentLoadedScene.sceneType != SceneType.Menu)
+        {
+            //发起播报-执行事件
+            afterSceneLoadedEvent.RaiseEvent();
+        }
+        
     }
 }

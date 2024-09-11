@@ -401,6 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatBar: {fileID: 1585533466}
   healthEvent: {fileID: 11400000, guid: 09f1233bbcea1a44b91214edc1dbdcf3, type: 2}
+  LoadEvent: {fileID: 11400000, guid: feb667eebc1bd2d47a5590b36c064069, type: 2}
 --- !u!1 &312582340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,6 +2363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90bcf014cf3792d4387f86a96ea5b25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LoadEventSo: {fileID: 11400000, guid: feb667eebc1bd2d47a5590b36c064069, type: 2}
+  afterSceneLoadEvent: {fileID: 11400000, guid: 47fa116c3ab88ef44a9698feb49d93fd, type: 2}
   inputDirection: {x: 0, y: 0}
   speed: 290
   jumpFore: 16.5

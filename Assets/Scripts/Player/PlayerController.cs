@@ -7,6 +7,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("监听事件")]
+    //场景卸载监听事件
+    public SceneLoadEventSO LoadEventSo;
+    //场景加载之后的监听事件
+    public VoidEventSO afterSceneLoadEvent;
+    
+    
     public PlayerInputControl inputControl;
 
     public Vector2 inputDirection;
@@ -59,12 +66,17 @@ public class PlayerController : MonoBehaviour
     {
         //启用输入系统
         inputControl.Enable();
+        LoadEventSo.LoadRequestEvent += OnLoadEvent;
+        afterSceneLoadEvent.OnEventRaised += OnAfterSceneLoad;
     }
 
     //当组件被关闭的时候
     private void OnDisable()
     {
         inputControl.Disable();
+        LoadEventSo.LoadRequestEvent -= OnLoadEvent;
+        afterSceneLoadEvent.OnEventRaised -= OnAfterSceneLoad;
+
     }
 
     // Update is called once per frame
@@ -80,6 +92,20 @@ public class PlayerController : MonoBehaviour
         {
             Move();
         }
+    }
+    
+    //卸载场景触发
+    private void OnLoadEvent(GameSceneSO arg0, Vector3 arg1, bool arg2)
+    {
+        //停止角色的控制
+        inputControl.GamePlay.Disable();
+    }
+    
+    //加载场景触发
+    private void OnAfterSceneLoad()
+    {
+        //开始角色控制
+        inputControl.GamePlay.Enable();
     }
 
     public void Move()

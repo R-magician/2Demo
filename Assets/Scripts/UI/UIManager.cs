@@ -9,19 +9,30 @@ public class UIManager : MonoBehaviour
     
     [Header("事件监听")]
     public CharacterEventSO healthEvent;
+    //场景事件监听
+    public SceneLoadEventSO LoadEvent;
 
     private void OnEnable()
     {
         //注册事件    
         healthEvent.OnEventRaised += OnHealthEvent;
+        LoadEvent.LoadRequestEvent += OnLoadEvent;
     }
 
     private void OnDisable()
     {
         //取消事件
         healthEvent.OnEventRaised -= OnHealthEvent;
+        LoadEvent.LoadRequestEvent -= OnLoadEvent;
     }
-    
+
+    //显示血条
+    private void OnLoadEvent(GameSceneSO arg0, Vector3 arg1, bool arg2)
+    {
+        var isMenu = arg0.sceneType == SceneType.Menu;
+        playerStatBar.gameObject.SetActive(!isMenu);
+    }
+
     //受伤事件
     private void OnHealthEvent(Character character)
     {
