@@ -137,12 +137,15 @@ public class Character : MonoBehaviour,ISaveAble
         if (data.characterPosDict.ContainsKey(GetDataID().ID))
         {
             //如果数据里面有这个ID
+            //保存位置
             data.characterPosDict[GetDataID().ID] = transform.position;
+            data.floatSaveData[GetDataID().ID + "health"] = this.currentHealth;
         }
         else
         {
             //第一次保存数据
             data.characterPosDict.Add(GetDataID().ID,transform.position);
+            data.floatSaveData.Add(GetDataID().ID+"health",this.currentHealth);
         }
     }
 
@@ -153,6 +156,10 @@ public class Character : MonoBehaviour,ISaveAble
         {
             //如果数据里面有这个ID-加载数据
             transform.position = data.characterPosDict[GetDataID().ID];
+            this.currentHealth = data.floatSaveData[GetDataID().ID + "health"];
+            
+            //通知更新UI
+            OnHealthChange.Invoke(this);
         } 
     }
 }

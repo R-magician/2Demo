@@ -8,7 +8,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : MonoBehaviour
+public class SceneLoader : MonoBehaviour,ISaveAble
 {
     //player 的transform
     public Transform playerTrans;
@@ -63,12 +63,18 @@ public class SceneLoader : MonoBehaviour
     {
         LoadEventSo.LoadRequestEvent += OnLoadRequestEvent;
         newGomeEvent.OnEventRaised += NewGame;
+
+        ISaveAble saveAble = this;
+        saveAble.RegisterSaveData();
     }
 
     private void OnDisable()
     {
         LoadEventSo.LoadRequestEvent -= OnLoadRequestEvent;
         newGomeEvent.OnEventRaised -= NewGame;
+        
+        ISaveAble saveAble = this;
+        saveAble.UnRegisterSaveData();
     }
     
     
@@ -174,5 +180,29 @@ public class SceneLoader : MonoBehaviour
             afterSceneLoadedEvent.RaiseEvent();
         }
         
+    }
+
+    public DataDefiniton GetDataID()
+    {
+        return GetComponent<DataDefiniton>();
+    }
+
+    public void SetSaveData(Data data)
+    {
+        data.SaveGameScene(currentLoadedScene);
+    }
+
+    public void LoadData(Data data)
+    {
+        var playerID = playerTrans.GetComponent<DataDefiniton>().ID;
+        if (data.characterPosDict.ContainsKey(playerID))
+        {
+            //找到存储的GUID-加载位置
+            positionTOGo = data.characterPosDict[playerID];
+            sceneToLoad = data.GetSaveScene();
+            
+            //加载场景
+            OnLoadRequestEvent(sceneToLoad,positionTOGo,true);
+        }
     }
 }
