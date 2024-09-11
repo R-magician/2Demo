@@ -9,25 +9,43 @@ public class UIManager : MonoBehaviour
     
     [Header("事件监听")]
     public CharacterEventSO healthEvent;
-    //场景事件监听
-    public SceneLoadEventSO LoadEvent;
+    //卸载场景事件监听
+    public SceneLoadEventSO unloadedSceneEvent;
+    //加载场景事件监听
+    public VoidEventSO loadDataEvent;
 
+    [Header("组件")]
+    //面板组件
+    public GameObject gameOverPanel;
+    //重新开始
+    public GameObject restartBtn;
+    
     private void OnEnable()
     {
-        //注册事件    
+        //受伤事件监听    
         healthEvent.OnEventRaised += OnHealthEvent;
-        LoadEvent.LoadRequestEvent += OnLoadEvent;
+        //卸载场景监听
+        unloadedSceneEvent.LoadRequestEvent += OnUnLoadEvent;
+        //加载场景监听
+        loadDataEvent.OnEventRaised+=OnLoadEvent;
     }
 
     private void OnDisable()
     {
         //取消事件
         healthEvent.OnEventRaised -= OnHealthEvent;
-        LoadEvent.LoadRequestEvent -= OnLoadEvent;
+        unloadedSceneEvent.LoadRequestEvent -= OnUnLoadEvent;
+        loadDataEvent.OnEventRaised -=OnLoadEvent;
+    }
+
+    private void OnLoadEvent()
+    {
+        //关闭GameOver面板
+        gameOverPanel.SetActive(false);
     }
 
     //显示血条
-    private void OnLoadEvent(GameSceneSO arg0, Vector3 arg1, bool arg2)
+    private void OnUnLoadEvent(GameSceneSO arg0, Vector3 arg1, bool arg2)
     {
         var isMenu = arg0.sceneType == SceneType.Menu;
         playerStatBar.gameObject.SetActive(!isMenu);

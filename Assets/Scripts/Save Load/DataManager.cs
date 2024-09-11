@@ -14,6 +14,8 @@ public class DataManager : MonoBehaviour
     [Header("事件监听")] 
     //保存事件监听
     public VoidEventSO saveDataEvent;
+    //加载保存数据
+    public VoidEventSO loadDataEvent;
 
     private List<ISaveAble> saveAbleList = new List<ISaveAble>();
 
@@ -38,6 +40,8 @@ public class DataManager : MonoBehaviour
     {
         //监听保存
         saveDataEvent.OnEventRaised += Save;
+        //监听加载
+        loadDataEvent.OnEventRaised += Load;
     }
 
     private void Update()
@@ -52,6 +56,7 @@ public class DataManager : MonoBehaviour
     private void OnDisable()
     {
         saveDataEvent.OnEventRaised -= Save;
+        loadDataEvent.OnEventRaised -= Load;
     }
 
     //注册的函数方法
