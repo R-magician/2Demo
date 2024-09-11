@@ -4360,12 +4360,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gdb-playstation-2_132
+      name: save_1
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 415
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -8364,13 +8364,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gdb-playstation-2_314
+      name: save_2
       rect:
         serializedVersion: 2
-        x: 481
+        x: 480
         y: 143
-        width: 14
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11471,7 +11471,6 @@ TextureImporter:
       gdb-playstation-2_129: 5173198912288422366
       gdb-playstation-2_130: 7450282118663437133
       gdb-playstation-2_131: 6473011770145150183
-      gdb-playstation-2_132: -7976825350785478841
       gdb-playstation-2_133: -3710044330021856066
       gdb-playstation-2_134: -7091558649031587922
       gdb-playstation-2_135: -5796401578588101022
@@ -11672,7 +11671,6 @@ TextureImporter:
       gdb-playstation-2_311: -5352603223741709239
       gdb-playstation-2_312: -7496536796018283912
       gdb-playstation-2_313: 8694643404587087716
-      gdb-playstation-2_314: -5222749743876957224
       gdb-playstation-2_315: 3485169510825952088
       gdb-playstation-2_316: -4815131840627140212
       gdb-playstation-2_317: -3402824856294756806
@@ -11888,6 +11886,8 @@ TextureImporter:
       s2: -6687333532983434717
       s3: 7587053536330050173
       s4: -7265235301736736664
+      save_1: -7976825350785478841
+      save_2: -5222749743876957224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
