@@ -2,11 +2,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
 //人物属性数值计算
-public class Character : MonoBehaviour
+public class Character : MonoBehaviour,ISaveAble
 {
     [Header("监听事件")]
     //新的开始
@@ -48,11 +49,16 @@ public class Character : MonoBehaviour
     private void OnEnable()
     {
         newGameEvent.OnEventRaised += NewGame;
+        ISaveAble saveAble = this;
+        //无论组件挂在哪一个物体上都把自己传过去强制执行一下
+        saveAble.RegisterSaveData();
     }
 
     private void OnDisable()
     {
         newGameEvent.OnEventRaised -= NewGame;
+        ISaveAble saveAble = this;
+        saveAble.UnRegisterSaveData();
     }
 
     private void Update()
@@ -117,5 +123,36 @@ public class Character : MonoBehaviour
             invulnerab = true;
             invulnerableCounter = invulnerableDuration;
         }
+    }
+
+    //获取GUID
+    public DataDefiniton GetDataID()
+    {
+        return GetComponent<DataDefiniton>();
+    }
+
+    //保存数据
+    public void SetSaveData(Data data)
+    {
+        if (data.characterPosDict.ContainsKey(GetDataID().ID))
+        {
+            //如果数据里面有这个ID
+            data.characterPosDict[GetDataID().ID] = transform.position;
+        }
+        else
+        {
+            //第一次保存数据
+            data.characterPosDict.Add(GetDataID().ID,transform.position);
+        }
+    }
+
+    //加载数据
+    public void LoadData(Data data)
+    {
+        if (data.characterPosDict.ContainsKey(GetDataID().ID))
+        {
+            //如果数据里面有这个ID-加载数据
+            transform.position = data.characterPosDict[GetDataID().ID];
+        } 
     }
 }

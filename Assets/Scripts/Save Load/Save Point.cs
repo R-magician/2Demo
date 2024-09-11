@@ -6,7 +6,7 @@ using UnityEngine;
 public class SavePoint : MonoBehaviour,IInteractable
 {
     [Header("广播")]
-    public VoidEventSO loadGameEvent;
+    public VoidEventSO saveDataEvent;
     
     [Header("变量参数")]
     //设置子物体的精灵组件
@@ -35,7 +35,7 @@ public class SavePoint : MonoBehaviour,IInteractable
             lightObj.SetActive(true);
             
             //TODO：保存数据
-            loadGameEvent.RaiseEvent();
+            saveDataEvent.RaiseEvent();
             
             //把标签切换成Untagged
             this.gameObject.tag = "Untagged";

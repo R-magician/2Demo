@@ -10,3 +10,10 @@ public enum SceneType
 {
     Location,Menu
 }
+
+//GUID的类型
+public enum PersistentType
+{
+    //可读可写,不保存
+    ReadWrite,DoNotPersist
+}

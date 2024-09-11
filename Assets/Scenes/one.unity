@@ -4056,7 +4056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8563fd515c8da2541968d83657c005ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadGameEvent: {fileID: 11400000, guid: e1f08c5c0991f7943af095ec4f189306, type: 2}
+  saveDataEvent: {fileID: 11400000, guid: 705d85d46213b4243ac4557512bc1ec6, type: 2}
   spriteRenderer: {fileID: 1404014993}
   lightObj: {fileID: 1850484131}
   darkImg: {fileID: -7976825350785478841, guid: c7f8fdd4644f013429993d125be1ff74, type: 3}
@@ -5631,6 +5631,14 @@ PrefabInstance:
     - target: {fileID: 1514781159789690545, guid: ceaae6d689e8dff46b55bbe596e276dc, type: 3}
       propertyPath: m_Name
       value: Boar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534105514732528214, guid: ceaae6d689e8dff46b55bbe596e276dc, type: 3}
+      propertyPath: ID
+      value: 82d13968-5946-4a48-bd67-3b08608c9745
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534105514732528214, guid: ceaae6d689e8dff46b55bbe596e276dc, type: 3}
+      propertyPath: persistentType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7707222581179507346, guid: ceaae6d689e8dff46b55bbe596e276dc, type: 3}
       propertyPath: m_LocalPosition.x
