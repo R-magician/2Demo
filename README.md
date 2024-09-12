@@ -1,6 +1,6 @@
 # 2D横板-勇士传说
 
-![image.png](image.png)
+![image.png](Assets%2FArtAssets%2FMarkDom%2Fimage.png)
 
 > 主要使用像素动画进行动作设计
 使用`ScriptableObject` 进行页面的设计的 **广播、监听**
