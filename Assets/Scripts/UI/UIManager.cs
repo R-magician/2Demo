@@ -2,6 +2,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -18,13 +19,49 @@ public class UIManager : MonoBehaviour
     public VoidEventSO gameOverEvent;
     //返回首页监听
     public VoidEventSO backToMainEvent;
+    //同步音量值监听
+    public FloatEventSO syncVolumeEvent;
+
+    [Header("广播")]
+    //游戏暂停启动
+    public VoidEventSO pauseEvent;
 
     [Header("组件")]
     //面板组件
     public GameObject gameOverPanel;
     //重新开始
     public GameObject restartBtn;
-    
+    //获取设置按钮
+    public Button settingBtn;
+    //获取暂停面板 
+    public GameObject pausePanel;
+    //获取滑动条
+    public Slider slider;
+
+    private void Awake()
+    {
+        //给按钮添加监听事件
+        settingBtn.onClick.AddListener(() =>
+        {
+            //检测暂停面板是否是激活状态
+            if (pausePanel.activeInHierarchy)
+            {
+                pausePanel.SetActive(false);
+                //游戏正常运行
+                Time.timeScale = 1;
+            }
+            else
+            {
+                //发起广播
+                pauseEvent.RaiseEvent();
+                //开启面板
+                pausePanel.SetActive(true);
+                //游戏暂停
+                Time.timeScale = 0;
+            }
+        });
+    }
+
     private void OnEnable()
     {
         //受伤事件监听    
@@ -37,6 +74,8 @@ public class UIManager : MonoBehaviour
         gameOverEvent.OnEventRaised += OnGameOverEvent;
         //返回首页监听
         backToMainEvent.OnEventRaised += OnLoadEvent;
+        //同步音量值监听
+        syncVolumeEvent.OnEventRaised += OnSyncVolumeEvent;
     }
 
     private void OnDisable()
@@ -47,6 +86,13 @@ public class UIManager : MonoBehaviour
         loadDataEvent.OnEventRaised -=OnLoadEvent;
         gameOverEvent.OnEventRaised -= OnGameOverEvent;
         backToMainEvent.OnEventRaised -= OnLoadEvent;
+        syncVolumeEvent.OnEventRaised -= OnSyncVolumeEvent;
+    }
+
+    //同步音量
+    private void OnSyncVolumeEvent(float arg0)
+    {
+        slider.value = (arg0 + 80)/100;
     }
 
     private void OnGameOverEvent()
