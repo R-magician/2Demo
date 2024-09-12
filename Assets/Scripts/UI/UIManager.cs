@@ -1,6 +1,7 @@
 //UI 管理
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class UIManager : MonoBehaviour
     public SceneLoadEventSO unloadedSceneEvent;
     //加载场景事件监听
     public VoidEventSO loadDataEvent;
+    //游戏结束监听
+    public VoidEventSO gameOverEvent;
+    //返回首页监听
+    public VoidEventSO backToMainEvent;
 
     [Header("组件")]
     //面板组件
@@ -28,6 +33,10 @@ public class UIManager : MonoBehaviour
         unloadedSceneEvent.LoadRequestEvent += OnUnLoadEvent;
         //加载场景监听
         loadDataEvent.OnEventRaised+=OnLoadEvent;
+        //游戏结束监听
+        gameOverEvent.OnEventRaised += OnGameOverEvent;
+        //返回首页监听
+        backToMainEvent.OnEventRaised += OnLoadEvent;
     }
 
     private void OnDisable()
@@ -36,6 +45,16 @@ public class UIManager : MonoBehaviour
         healthEvent.OnEventRaised -= OnHealthEvent;
         unloadedSceneEvent.LoadRequestEvent -= OnUnLoadEvent;
         loadDataEvent.OnEventRaised -=OnLoadEvent;
+        gameOverEvent.OnEventRaised -= OnGameOverEvent;
+        backToMainEvent.OnEventRaised -= OnLoadEvent;
+    }
+
+    private void OnGameOverEvent()
+    {
+        //激活GameOver面板
+        gameOverPanel.SetActive(true);
+        //因为事件系统只会有一个，设置打开面板激活的按钮
+        EventSystem.current.SetSelectedGameObject(restartBtn);
     }
 
     private void OnLoadEvent()

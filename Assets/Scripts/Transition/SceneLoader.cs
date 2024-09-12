@@ -22,6 +22,8 @@ public class SceneLoader : MonoBehaviour,ISaveAble
     public SceneLoadEventSO LoadEventSo;
     //按钮切换监听
     public VoidEventSO newGomeEvent;
+    //返回首页监听
+    public VoidEventSO backToMainEvent;
     
     [Header("广播切换场景")]
     public VoidEventSO afterSceneLoadedEvent;
@@ -63,6 +65,7 @@ public class SceneLoader : MonoBehaviour,ISaveAble
     {
         LoadEventSo.LoadRequestEvent += OnLoadRequestEvent;
         newGomeEvent.OnEventRaised += NewGame;
+        backToMainEvent.OnEventRaised += OnBackToMainEvent;
 
         ISaveAble saveAble = this;
         saveAble.RegisterSaveData();
@@ -72,12 +75,19 @@ public class SceneLoader : MonoBehaviour,ISaveAble
     {
         LoadEventSo.LoadRequestEvent -= OnLoadRequestEvent;
         newGomeEvent.OnEventRaised -= NewGame;
+        backToMainEvent.OnEventRaised -= OnBackToMainEvent;
         
         ISaveAble saveAble = this;
         saveAble.UnRegisterSaveData();
     }
-    
-    
+
+    private void OnBackToMainEvent()
+    {
+        sceneToLoad = menuScene;
+        LoadEventSo.RaiseLoadRequestEvent(sceneToLoad,menuPosition,true);
+    }
+
+
     private void NewGame()
     {
         sceneToLoad = firstLoadScene;

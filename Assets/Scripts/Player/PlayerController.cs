@@ -9,9 +9,13 @@ public class PlayerController : MonoBehaviour
 {
     [Header("监听事件")]
     //场景卸载监听事件
-    public SceneLoadEventSO LoadEventSo;
+    public SceneLoadEventSO sceneLoadEvent;
     //场景加载之后的监听事件
     public VoidEventSO afterSceneLoadEvent;
+    //加载游戏进度监听事件
+    public VoidEventSO loadDataEvent;
+    //返回首页监听
+    public VoidEventSO backToMainEvent;
     
     
     public PlayerInputControl inputControl;
@@ -59,24 +63,27 @@ public class PlayerController : MonoBehaviour
 
         //攻击
         inputControl.GamePlay.Attack.started += PlayerAttack;
+        //启用输入系统
+        inputControl.Enable();
     }
 
     //当组件被启动的时候
     private void OnEnable()
     {
-        //启用输入系统
-        inputControl.Enable();
-        LoadEventSo.LoadRequestEvent += OnLoadEvent;
+        sceneLoadEvent.LoadRequestEvent += OnLoadEvent;
         afterSceneLoadEvent.OnEventRaised += OnAfterSceneLoad;
+        loadDataEvent.OnEventRaised += OnLoadDataEvent;
+        backToMainEvent.OnEventRaised += OnLoadDataEvent;
     }
 
     //当组件被关闭的时候
     private void OnDisable()
     {
         inputControl.Disable();
-        LoadEventSo.LoadRequestEvent -= OnLoadEvent;
+        sceneLoadEvent.LoadRequestEvent -= OnLoadEvent;
         afterSceneLoadEvent.OnEventRaised -= OnAfterSceneLoad;
-
+        loadDataEvent.OnEventRaised -= OnLoadDataEvent;
+        backToMainEvent.OnEventRaised -= OnLoadDataEvent;
     }
 
     // Update is called once per frame
@@ -99,6 +106,12 @@ public class PlayerController : MonoBehaviour
     {
         //停止角色的控制
         inputControl.GamePlay.Disable();
+    }
+    
+    //读取游戏进度
+    private void OnLoadDataEvent()
+    {
+        isDead = false;
     }
     
     //加载场景触发
